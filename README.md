@@ -19,5 +19,5 @@ The workflow performs the following tasks:
    - **pat_token:** A Personal Access Token with repo permissions.
    - **secret_name:** The name of the repository secret to update.
 
-> ![NOTE]
+> [!NOTE]
 Needs testing. (Like is the secret updated with the correct information? Ill do that soon)
