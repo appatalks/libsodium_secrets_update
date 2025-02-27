@@ -4,7 +4,7 @@
 
 This is a GitHub Actions workflow that updates a repository secret using [NSec .NET for C#](https://github.com/ektrah/nsec). 
 
-Proof-of-concept to update a secret using `NSec` rather than [Sodium.Core](https://github.com/ektrah/libsodium-core) as it is no longer maintained, and a possible a candidate for a replacement for GitHub's [current recommendation](https://docs.github.com/en/rest/guides/encrypting-secrets-for-the-rest-api?apiVersion=2022-11-28#example-encrypting-a-secret-using-c).
+Proof-of-concept to update a secret using `NSec` rather than [Sodium.Core](https://github.com/ektrah/libsodium-core) as it is no longer maintained, and a possible candidate for a replacement for GitHub's [current recommendation](https://docs.github.com/en/rest/guides/encrypting-secrets-for-the-rest-api?apiVersion=2022-11-28#example-encrypting-a-secret-using-c).
 
 
 The workflow performs the following tasks:
