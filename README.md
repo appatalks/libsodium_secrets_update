@@ -1,5 +1,5 @@
 > [!CAUTION]
-> WIP
+> WIP - DOESNT WORK ... YET
 > 
 ## Use `.NET NSec library for C#` based on [libsodium](https://libsodium.org/) to update repository secrets
 
