@@ -1,6 +1,6 @@
 > [!CAUTION]
 > Proof-of-Concept
-> Read more here for insight: [libsodium investigation:](https://github.com/appatalks/gh_nsec_secrets_update/issues/1)
+> Read more here for insight: [libsodium investigation](https://github.com/appatalks/gh_nsec_secrets_update/issues/1)
 
 ## Use Libsodium directly with `P/Invoke` method to Encrypt and update GitHub Repository Secret 
 
