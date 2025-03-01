@@ -1,14 +1,18 @@
 > [!CAUTION]
-> WIP - DOESNT WORK ... YET
-> 
-## Use `.NET NSec library for C#` based on [libsodium](https://libsodium.org/) to update repository secrets
+> Proof-of-Concept
+> Read more here for insight: [libsodium investigation:](https://github.com/appatalks/gh_nsec_secrets_update/issues/1)
+
+## Use Libsodium directly with `P/Invoke` method to Encrypt and update GitHub Repository Secret 
 
 ### Repository Secret Update Workflow
 
-This is a GitHub Actions workflow that updates a repository secret using [NSec .NET for C#](https://github.com/ektrah/nsec). 
+This is a GitHub Actions workflow that updates a repository secret using C# and .NET bindings.
 
-Proof-of-concept to update a secret using `NSec` rather than [Sodium.Core](https://github.com/ektrah/libsodium-core) as it is no longer maintained, and a possible candidate for a replacement to GitHub's [current recommendation](https://docs.github.com/en/rest/guides/encrypting-secrets-for-the-rest-api?apiVersion=2022-11-28#example-encrypting-a-secret-using-c).
+Proof-of-concept to update a secret using `libsodium` rather than [Sodium.Core](https://github.com/ektrah/libsodium-core) as it is no longer maintained, and a possible candidate for a replacement to GitHub's [current recommendation](https://docs.github.com/en/rest/guides/encrypting-secrets-for-the-rest-api?apiVersion=2022-11-28#example-encrypting-a-secret-using-c).
 
+> [!NOTE]
+> - *`P/Invoke` with Libsodium*: The project uses [P/Invoke to call native Libsodium functions](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) (`sodium_init` and `crypto_box_seal`) from C#.
+> - *Sealed Box Encryption*: The `crypto_box_seal` method encrypts data using the recipient's public key without needing a sender key pair.
 
 ## How to Use
 
@@ -17,6 +21,3 @@ Proof-of-concept to update a secret using `NSec` rather than [Sodium.Core](https
    - **secret:** The new or updated Secret
    - **pat_token:** A Personal Access Token with repo permissions.
    - **secret_name:** The name of the repository secret to update.
-
-> [!NOTE]
-Needs testing. (Like is the secret updated with the correct information? Ill do that soon)
