@@ -16,8 +16,10 @@ Proof-of-concept to update a secret using `libsodium` rather than [Sodium.Core](
 
 ## How to Use
 
-1. Trigger the workflow manually.
-2. Provide the following inputs:
+0. Use this Actions Workflow: [libsodium-dev-secret-update.yml](https://github.com/appatalks/gh_nsec_secrets_update/blob/main/libsodium-dev-secret-update.yml)
+   - It's not polished so you will need to look at the code to set up your variables, etc.
+2. Trigger the workflow manually.
+3. Provide the following inputs:
    - **secret:** The new or updated Secret
    - **pat_token:** A Personal Access Token with repo permissions.
    - **secret_name:** The name of the repository secret to update.
