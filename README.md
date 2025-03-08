@@ -22,5 +22,3 @@ Proof-of-concept to update a secret using `libsodium` rather than [Sodium.Core](
    - **secret:** The new or updated Secret
    - **pat_token:** A Personal Access Token with repo permissions.
    - **secret_name:** The name of the repository secret to update.
-
-- If this does work, going to rename the repository.
